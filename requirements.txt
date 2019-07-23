@@ -5,3 +5,5 @@ flask-cors
 gevent
 
 pytorch-pretrained-bert>=0.6
+
+torch
