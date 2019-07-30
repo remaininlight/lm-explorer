@@ -1,0 +1,15 @@
+# ~/.config/systemd/user/jupyter.service
+[Unit]
+Description=An interactive python notebook server
+After=network.target
+
+[Service]
+ExecStart=/home/ubuntu/anaconda3/envs/nlp/bin/jupyter notebook --no-browser --port=8888 --notebook-dir=~/lm-explorer --certfile=~/ssl/mycert.pem --keyfile ~/ssl/mykey.key
+Restart=always
+RestartSec=10
+PrivateTmp=true
+ProtectSystem=true
+User=ubuntu
+
+[Install]
+WantedBy=multi-user.target

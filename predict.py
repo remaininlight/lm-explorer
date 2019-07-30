@@ -3,9 +3,9 @@ from lm_explorer.lm.gpt2 import GPT2LanguageModel
 model_117M = GPT2LanguageModel(model_name='117M')
 model_345M = GPT2LanguageModel(model_name='345M')
 
-def predict(previous: str = None, next: str = None, topk: int = 10):
+def predict(previous: str = None, model_name: str = '345M', next: str = None, topk: int = 10):
 
-    model_name = "345M"
+    #model_name = "345M"
 
     if model_name == "117M":
         logits = model_117M.predict(previous, next)
